@@ -5,13 +5,19 @@ import { logger } from "./helpers/Logger";
 import fs from 'fs';
 
 export const DEFINES  = {
+    COOLDONW_MINUTES: 20,
     LINK: `https://www.linkedin.com/search/results/people/?activelyHiringForJobTitles=%5B%229%22%2C%2239%22%2C%2225201%22%2C%2225194%22%5D&geoUrn=%5B%22103644278%22%5D&keywords=tech%20recruiter&origin=FACETED_SEARCH&sid=__G`, 
 }
+
+setInterval(() => {
+    logger.warn('Cooldown: ' + DEFINES.COOLDONW_MINUTES + ' minutes reached, exiting...');
+    process.exit(0);
+}, 1000 * 60 * DEFINES.COOLDONW_MINUTES);
 
 const main = async () => {
     try {
         // Show welcome banner
-        logger.showBanner('LinkedIn Recruiter Outreach Bot');
+        logger.showBanner('Recruiter Bot');
         
         // Show welcome box
         logger.showBox(

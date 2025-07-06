@@ -96,7 +96,18 @@ export class ChatService {
                 await this.closeAllChats();
                 await button.click();
 
-                await page.waitForSelector('[aria-label="Write a message…"]', { timeout: 5000 });
+                try{
+                    await page.waitForSelector('[aria-label="Write a message…"]', { timeout: 5000 });
+                }catch(e){
+                    const modal = await page.$('.modal-upsell-header');
+                    const modalText = await getTextFromElement(modal as ElementHandle<Element>);
+
+                    if(modalText?.toLowerCase().includes('InMail credits'.toLowerCase())){
+                        logger.error('You have no more InMail credits, waiting 1 hour...');
+                        await sleep(60 * 60 * 1000);
+                        return false;
+                    }
+                }
 
                 const chatDiv = await page.$('[data-msg-overlay-conversation-bubble-is-minimized="false"]');
 

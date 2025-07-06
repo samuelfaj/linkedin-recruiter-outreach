@@ -135,3 +135,5 @@ coverage/
 
 # Prettier cache
 .prettierrc.cache 
+
+links.json

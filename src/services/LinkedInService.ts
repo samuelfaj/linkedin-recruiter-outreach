@@ -12,7 +12,15 @@ export class LinkedInService {
 
     async login(){
         logger.linkedInActivity('Navigating to LinkedIn login page...');
+
         await this.puppeteerService.goto("https://www.linkedin.com/login");
+
+        if(this.puppeteerService.page.url().includes("/feed/")){
+            await this.puppeteerService.page.waitForNavigation({ waitUntil: 'networkidle0' });
+
+            logger.success('Already logged in!');
+            return;
+        }
 
         let loggedIn = false;
 
