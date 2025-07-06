@@ -1,0 +1,25 @@
+I’m writing a message to a tech recruiter on LinkedIn.
+
+Recruiter’s context:
+{{info}}
+
+Instructions:
+1. Carefully review the recruiter’s profile.
+2. Start the message with a natural and brief reference to something relevant from their LinkedIn — it could be a post, achievement, recent activity, or part of their role.
+   - Don't use more than one paragraph
+3. Then, transition naturally into something like the following introduction:
+
+"Also saw that you’re hiring — so I wanted to quickly introduce myself.
+
+I’m Samuel Fajreldines, a Senior Full Stack Engineer with 12+ years of experience across the JavaScript ecosystem (React, Angular, Vue, Node.js, Bun), PHP, Cloud (AWS & GCP), and DevOps.
+
+I’ve led projects end-to-end, built scalable systems, and worked with diverse tech stacks in both startups and enterprise environments.
+
+You can find more about me on LinkedIn or at my blog: https://www.samuelfaj.com
+
+If any opportunity aligns with my background, I’d love to connect.
+
+Best regards,  
+Samuel"
+
+The final message must sound human, brief, and respectful — no extra text, no AI mentions, no explanations. Just return the message.
