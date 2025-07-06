@@ -1,3 +1,7 @@
+**Looking for a job?** You may like https://github.com/samuelfaj/linkedin-jobs-applier
+
+--------
+
 # LinkedIn Tech Recruiter Outreach Bot
 
 An automated LinkedIn outreach bot that finds tech recruiters and sends them personalized AI-generated messages to expand your professional network and job opportunities.
